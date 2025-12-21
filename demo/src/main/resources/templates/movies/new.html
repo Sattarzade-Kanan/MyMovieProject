@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thyleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Movie</title>
+</head>
+<body>
+<h1>New movie</h1>
+   <form th:action="@{/movies}" th:object="${movie} " method="post">
+        Title <input type="text" th:field="*{title}"/> <br>
+       Genre <input type="text" th:field="*{genre}"/> <br>
+     PriceTicked   <input type="number" step="0.1" th:field="*{priceticked}"/> <br>
+
+       <button type="submit">Save</button>
+   </form>
+</body>
+</html>

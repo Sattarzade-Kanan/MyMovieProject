@@ -13,7 +13,7 @@ public class Movie {
     private Double priceTicked;
     //Constructor
 
-    public Movie(Integer id, String genre, String title, Double priceTicked) {
+    public Movie() {
         this.id = id;
         this.genre = genre;
         this.title = title;
