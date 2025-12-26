@@ -4,13 +4,12 @@ import com.example.movie.entity.Movie;
 import com.example.movie.service.MovieService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @Controller
-@RequestMapping("/page")
+@RequestMapping("/movies")
 public class MoviePageController {
     private final MovieService movieService;
 
@@ -32,4 +31,14 @@ public class MoviePageController {
         movieService.addMovie(movie);
         return "redirect:/list";
     }
+    @GetMapping("/{id}/edit")
+    public String edit(@PathVariable Integer id, Model model){
+        model.addAttribute("movie",movieService.getMovie(id));
+        return "movies/edit";
+    }
+@PostMapping("/{id}/delete")
+    public String delete(@PathVariable Integer id){
+      movieService.deleteMovie(id);
+      return "redirect:/list";
+}
 }

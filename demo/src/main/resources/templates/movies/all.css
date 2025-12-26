@@ -1,0 +1,102 @@
+/* Общий фон и текст */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #222;
+}
+
+/* Кнопка "Add Movie" */
+a[href="new.html"] {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+a[href="new.html"]:hover {
+    background-color: #218838;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Заголовки */
+th {
+    background-color: #343a40;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Ячейки */
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Наведение на строку */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Ячейка с кнопками */
+td:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Кнопка Edit */
+td a:not([href="new.html"]) {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+td a:not([href="new.html"]):hover {
+    background-color: #0056b3;
+}
+
+/* Кнопка Delete */
+button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #b52a37;
+}

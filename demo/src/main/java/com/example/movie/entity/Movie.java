@@ -11,14 +11,17 @@ public class Movie {
     private String title;
     private String genre;
     private Double priceTicked;
-    //Constructor
+    public Movie(){
 
-    public Movie() {
+    }
+
+    public Movie(Integer id, String title, String genre, Double priceTicked) {
         this.id = id;
-        this.genre = genre;
         this.title = title;
+        this.genre = genre;
         this.priceTicked = priceTicked;
     }
+
 
     //Getter Setter
 

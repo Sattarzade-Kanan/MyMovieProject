@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
      <head>
          <title>Movies</title>
-         <link rel="stylesheet" href="list.css">
+         <link rel="stylesheet" href="all.css">
      </head>
               <body >
                   <h1>List</h1>
@@ -14,13 +14,25 @@
                                <th>Title</th>
                                <th>Genre</th>
                                <th>PriceTicked</th>
+                               <th>Actions</th>
                            </tr>
                               <tr th:each="movie :${movies}">
                                   <td  th:text="${movie.id}"></td>
                                   <td th:text="${movie.title}"></td>
                                   <td th:text="${movie.genre}"></td>
                                   <td th:text="${movie.priceticked}"></td>
+                                  <td>
+                                      <a th:href="@{/movies/{id}/movies/edit
+                                      (id=${movie.id})">Edit</a>
+                                      <form th:action="@{/movies/{id}/movies/delete
+                                      (id=${movie.id})" method="post">
+                                          <button type="submit">Delete</button>
+                                      </form>
+<!--                                      -->
+
+                                  </td>
                               </tr>
+
                        </table>
 
               </body>

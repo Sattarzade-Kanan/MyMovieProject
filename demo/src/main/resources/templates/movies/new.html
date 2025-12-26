@@ -3,15 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>New Movie</title>
+
 </head>
 <body>
 <h1>New movie</h1>
    <form th:action="@{/movies}" th:object="${movie} " method="post">
         Title <input type="text" th:field="*{title}"/> <br>
        Genre <input type="text" th:field="*{genre}"/> <br>
-     PriceTicked   <input type="number" step="0.1" th:field="*{priceticked}"/> <br>
+     PriceTicked   <input type="number" step="1" th:field="*{priceticked}"/> <br>
 
-       <button type="submit">Save</button>
+     <button type="submit">Save</button>
    </form>
+<style>
+    /* Общий фон и текст */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 40px;
+    color: #333;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #222;
+}
+
+/* Форма */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Метки и поля */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Кнопка */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+</style>
 </body>
 </html>
